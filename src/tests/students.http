@@ -1,0 +1,54 @@
+// GET - GET AVERAGE
+
+GET http://localhost:3000/students/getAverage
+###
+
+GET http://localhost:3000/students/getAverage?course=303
+###
+
+GET http://localhost:3000/students/getAverage?course=888
+###
+
+
+// DELETE - DELETE COURSE/GRADE 
+
+DELETE  http://localhost:3000/students/99/courses/203
+###
+
+DELETE  http://localhost:3000/students/1/courses/209
+###
+
+DELETE  http://localhost:3000/students/1/courses/203
+###
+
+
+// PUT - ADD COURSE
+
+PUT http://localhost:3000/students/9/courses
+content-Type: application/json
+
+{
+    "course":203,
+    "grade":90
+}
+###
+
+PUT http://localhost:3000/students/2/courses
+Content-Type: application/json
+
+{
+    "course":203,
+    "grade":90
+}
+###
+
+PUT http://localhost:3000/students/2/courses
+Content-Type: application/json
+
+{
+    "course":544,
+    "grade":92
+}
+
+
+
