@@ -36,7 +36,6 @@ export class Student {
     static deleteCourse(studentId: number, courseId: number) {
         const student = students.find(student => student.id === studentId)
         if (!student) throw new Error(`No student with Id ${studentId}`)
-        const courseIndex = student.transcript.findIndex(course => course.course === courseId)
         if (!student.transcript.some(t => t.course === courseId))
             throw new Error(`No course with Id ${courseId}`)
         student.transcript = student.transcript.filter(t => t.course !== courseId)
